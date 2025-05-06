@@ -40,7 +40,7 @@ app.get('/sso', async (req, res) => {
 
   } catch(err) {
     console.error('Token verification error:', err);
-    return res.status(404).send('Invalid token');
+    return   res.redirect(302, 'https://attri.ai/login');
   }
 });
 
