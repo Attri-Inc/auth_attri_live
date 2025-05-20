@@ -20,7 +20,7 @@ app.get('/sso', async (req, res) => {
     const vercel_cookie_key = payload.vercel_cookie_key;
 
     if (!projectName || !vercel_cookie_value) {
-      payload?.env === 'prod'?
+      payload?.env === 'production'?
        res.redirect(302, 'https://attri.ai/login'):
        res.redirect(302, 'https://dev.attri.ai/login')
     }
